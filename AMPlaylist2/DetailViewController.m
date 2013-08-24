@@ -234,12 +234,12 @@
   cell.artist.text = [[object valueForKey:@"artist"] description];
   cell.track.text = [[object valueForKey:@"title"] description];
   cell.bpm.text = [[object valueForKey:@"bpm"] description];
-  NSString *trackNumber = [[object valueForKey:@"trackNumber"] description];
+//  NSString *trackNumber = [[object valueForKey:@"trackNumber"] description];
 //  cell.trackNumber.text = trackNumber.length == 1 ? [NSString stringWithFormat:@"0%@", trackNumber] : trackNumber;
   cell.trackNumber.text = [[object valueForKey:@"key"] description];
   cell.comment.text = [[object valueForKey:@"comment"] description];
   cell.discName = [[object valueForKey:@"discName"] description];
-//  cell.discName = [[object valueForKey:@"key"] description];
+//  cell.trackNumber.text = [[object valueForKey:@"key"] description];
   
   UITapGestureRecognizer* doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
   doubleTap.numberOfTapsRequired = 2;

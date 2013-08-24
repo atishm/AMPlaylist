@@ -138,10 +138,8 @@
   if ([data allKeys].count > 0) {
     [self deleteAllObjects];
     [self deleteAllTracks];
-//    [self insertNewDisc:@"_Hotlist"];
     for (NSString *discName in [data allKeys]) {
       [self insertNewDisc:discName];
-//      NSLog(@"inserting: %@", discName);
       
       NSArray *tracks = [data objectForKey:discName];
       for (AMTrack *track in tracks) {
@@ -220,7 +218,7 @@
   [trackMO setValue:track.comment forKey:@"comment"];
   [trackMO setValue:track.discName forKey:@"discName"];
   [trackMO setValue:[NSNumber numberWithInt:track.trackNumber] forKey:@"trackNumber"];
-//  [trackMO setValue:track.key forKey:@"key"];
+  [trackMO setValue:track.key forKey:@"key"];
   
   // Save the context.
   NSError *error = nil;
