@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		230B1E8315D0D83100C9EC0B /* AMTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 230B1E8215D0D83100C9EC0B /* AMTrack.m */; };
+		230D86FF15D0B74E00FCB213 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230D86FE15D0B74E00FCB213 /* UIKit.framework */; };
+		230D870115D0B74E00FCB213 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230D870015D0B74E00FCB213 /* Foundation.framework */; };
+		230D870315D0B74E00FCB213 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230D870215D0B74E00FCB213 /* CoreGraphics.framework */; };
+		230D870515D0B74E00FCB213 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230D870415D0B74E00FCB213 /* CoreData.framework */; };
+		230D870B15D0B74E00FCB213 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 230D870915D0B74E00FCB213 /* InfoPlist.strings */; };
+		230D870D15D0B74E00FCB213 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 230D870C15D0B74E00FCB213 /* main.m */; };
+		230D871115D0B74E00FCB213 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 230D871015D0B74E00FCB213 /* AppDelegate.m */; };
+		230D871415D0B74E00FCB213 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 230D871215D0B74E00FCB213 /* MainStoryboard_iPhone.storyboard */; };
+		230D871715D0B74E00FCB213 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 230D871515D0B74E00FCB213 /* MainStoryboard_iPad.storyboard */; };
+		230D871A15D0B74E00FCB213 /* AMPlaylist2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 230D871815D0B74E00FCB213 /* AMPlaylist2.xcdatamodeld */; };
+		230D871D15D0B74E00FCB213 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 230D871C15D0B74E00FCB213 /* MasterViewController.m */; };
+		230D872015D0B74E00FCB213 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 230D871F15D0B74E00FCB213 /* DetailViewController.m */; };
+		230D872D15D0BA2900FCB213 /* AMFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 230D872C15D0BA2900FCB213 /* AMFetcher.m */; };
+		23492B2B15DE0F1C008B654C /* TrackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23492B2A15DE0F1C008B654C /* TrackCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		230B1E8115D0D83100C9EC0B /* AMTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMTrack.h; path = AMPlaylist2/AMTrack.h; sourceTree = "<group>"; };
+		230B1E8215D0D83100C9EC0B /* AMTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMTrack.m; path = AMPlaylist2/AMTrack.m; sourceTree = "<group>"; };
+		230D86FA15D0B74E00FCB213 /* playlist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = playlist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		230D86FE15D0B74E00FCB213 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		230D870015D0B74E00FCB213 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		230D870215D0B74E00FCB213 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		230D870415D0B74E00FCB213 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		230D870815D0B74E00FCB213 /* AMPlaylist2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AMPlaylist2-Info.plist"; sourceTree = "<group>"; };
+		230D870A15D0B74E00FCB213 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		230D870C15D0B74E00FCB213 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		230D870E15D0B74E00FCB213 /* AMPlaylist2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AMPlaylist2-Prefix.pch"; sourceTree = "<group>"; };
+		230D870F15D0B74E00FCB213 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		230D871015D0B74E00FCB213 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		230D871315D0B74E00FCB213 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		230D871615D0B74E00FCB213 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		230D871915D0B74E00FCB213 /* AMPlaylist2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AMPlaylist2.xcdatamodel; sourceTree = "<group>"; };
+		230D871B15D0B74E00FCB213 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		230D871C15D0B74E00FCB213 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		230D871E15D0B74E00FCB213 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		230D871F15D0B74E00FCB213 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		230D872B15D0BA2900FCB213 /* AMFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFetcher.h; path = AMPlaylist2/AMFetcher.h; sourceTree = "<group>"; };
+		230D872C15D0BA2900FCB213 /* AMFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFetcher.m; path = AMPlaylist2/AMFetcher.m; sourceTree = "<group>"; };
+		23492B2915DE0F1C008B654C /* TrackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackCell.h; sourceTree = "<group>"; };
+		23492B2A15DE0F1C008B654C /* TrackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		230D86F715D0B74E00FCB213 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				230D86FF15D0B74E00FCB213 /* UIKit.framework in Frameworks */,
+				230D870115D0B74E00FCB213 /* Foundation.framework in Frameworks */,
+				230D870315D0B74E00FCB213 /* CoreGraphics.framework in Frameworks */,
+				230D870515D0B74E00FCB213 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		230D86EF15D0B74E00FCB213 = {
+			isa = PBXGroup;
+			children = (
+				230D872A15D0BA1600FCB213 /* Data */,
+				230D870615D0B74E00FCB213 /* AMPlaylist2 */,
+				230D86FD15D0B74E00FCB213 /* Frameworks */,
+				230D86FB15D0B74E00FCB213 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		230D86FB15D0B74E00FCB213 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				230D86FA15D0B74E00FCB213 /* playlist.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		230D86FD15D0B74E00FCB213 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				230D86FE15D0B74E00FCB213 /* UIKit.framework */,
+				230D870015D0B74E00FCB213 /* Foundation.framework */,
+				230D870215D0B74E00FCB213 /* CoreGraphics.framework */,
+				230D870415D0B74E00FCB213 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		230D870615D0B74E00FCB213 /* AMPlaylist2 */ = {
+			isa = PBXGroup;
+			children = (
+				230D870F15D0B74E00FCB213 /* AppDelegate.h */,
+				230D871015D0B74E00FCB213 /* AppDelegate.m */,
+				230D871215D0B74E00FCB213 /* MainStoryboard_iPhone.storyboard */,
+				230D871515D0B74E00FCB213 /* MainStoryboard_iPad.storyboard */,
+				230D871B15D0B74E00FCB213 /* MasterViewController.h */,
+				230D871C15D0B74E00FCB213 /* MasterViewController.m */,
+				230D871E15D0B74E00FCB213 /* DetailViewController.h */,
+				230D871F15D0B74E00FCB213 /* DetailViewController.m */,
+				230D871815D0B74E00FCB213 /* AMPlaylist2.xcdatamodeld */,
+				230D870715D0B74E00FCB213 /* Supporting Files */,
+				23492B2915DE0F1C008B654C /* TrackCell.h */,
+				23492B2A15DE0F1C008B654C /* TrackCell.m */,
+			);
+			path = AMPlaylist2;
+			sourceTree = "<group>";
+		};
+		230D870715D0B74E00FCB213 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				230D870815D0B74E00FCB213 /* AMPlaylist2-Info.plist */,
+				230D870915D0B74E00FCB213 /* InfoPlist.strings */,
+				230D870C15D0B74E00FCB213 /* main.m */,
+				230D870E15D0B74E00FCB213 /* AMPlaylist2-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		230D872A15D0BA1600FCB213 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				230B1E8115D0D83100C9EC0B /* AMTrack.h */,
+				230B1E8215D0D83100C9EC0B /* AMTrack.m */,
+				230D872B15D0BA2900FCB213 /* AMFetcher.h */,
+				230D872C15D0BA2900FCB213 /* AMFetcher.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		230D86F915D0B74E00FCB213 /* playlist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 230D872315D0B74E00FCB213 /* Build configuration list for PBXNativeTarget "playlist" */;
+			buildPhases = (
+				230D86F615D0B74E00FCB213 /* Sources */,
+				230D86F715D0B74E00FCB213 /* Frameworks */,
+				230D86F815D0B74E00FCB213 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = playlist;
+			productName = AMPlaylist2;
+			productReference = 230D86FA15D0B74E00FCB213 /* playlist.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		230D86F115D0B74E00FCB213 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 230D86F415D0B74E00FCB213 /* Build configuration list for PBXProject "AMPlaylist2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 230D86EF15D0B74E00FCB213;
+			productRefGroup = 230D86FB15D0B74E00FCB213 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				230D86F915D0B74E00FCB213 /* playlist */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		230D86F815D0B74E00FCB213 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				230D870B15D0B74E00FCB213 /* InfoPlist.strings in Resources */,
+				230D871415D0B74E00FCB213 /* MainStoryboard_iPhone.storyboard in Resources */,
+				230D871715D0B74E00FCB213 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		230D86F615D0B74E00FCB213 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				230D870D15D0B74E00FCB213 /* main.m in Sources */,
+				230D871115D0B74E00FCB213 /* AppDelegate.m in Sources */,
+				230D871A15D0B74E00FCB213 /* AMPlaylist2.xcdatamodeld in Sources */,
+				230D871D15D0B74E00FCB213 /* MasterViewController.m in Sources */,
+				230D872015D0B74E00FCB213 /* DetailViewController.m in Sources */,
+				230D872D15D0BA2900FCB213 /* AMFetcher.m in Sources */,
+				230B1E8315D0D83100C9EC0B /* AMTrack.m in Sources */,
+				23492B2B15DE0F1C008B654C /* TrackCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		230D870915D0B74E00FCB213 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				230D870A15D0B74E00FCB213 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		230D871215D0B74E00FCB213 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				230D871315D0B74E00FCB213 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		230D871515D0B74E00FCB213 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				230D871615D0B74E00FCB213 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		230D872115D0B74E00FCB213 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		230D872215D0B74E00FCB213 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		230D872415D0B74E00FCB213 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AMPlaylist2/AMPlaylist2-Prefix.pch";
+				INFOPLIST_FILE = "AMPlaylist2/AMPlaylist2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		230D872515D0B74E00FCB213 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AMPlaylist2/AMPlaylist2-Prefix.pch";
+				INFOPLIST_FILE = "AMPlaylist2/AMPlaylist2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		230D86F415D0B74E00FCB213 /* Build configuration list for PBXProject "AMPlaylist2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				230D872115D0B74E00FCB213 /* Debug */,
+				230D872215D0B74E00FCB213 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		230D872315D0B74E00FCB213 /* Build configuration list for PBXNativeTarget "playlist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				230D872415D0B74E00FCB213 /* Debug */,
+				230D872515D0B74E00FCB213 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		230D871815D0B74E00FCB213 /* AMPlaylist2.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				230D871915D0B74E00FCB213 /* AMPlaylist2.xcdatamodel */,
+			);
+			currentVersion = 230D871915D0B74E00FCB213 /* AMPlaylist2.xcdatamodel */;
+			path = AMPlaylist2.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 230D86F115D0B74E00FCB213 /* Project object */;
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8214D0EF-1666-4B0E-B46B-953597FE64F3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AMPlaylist2</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FB8DDD02-9931-4C39-B34A-78E0C0681CBC</key>
+		<string>http://atish.dreamhosters.com/AMDiscs</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AMPlaylist2.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FB8DDD02-9931-4C39-B34A-78E0C0681CBC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>FB8DDD02-9931-4C39-B34A-78E0C0681CBC</key>
+		<string>http://atish.dreamhosters.com/AMDiscs</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://atish.dreamhosters.com/AMDiscs/AMPlaylist2.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FB8DDD02-9931-4C39-B34A-78E0C0681CBC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FB8DDD02-9931-4C39-B34A-78E0C0681CBC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AMDiscs</string>
+		</dict>
+	</array>
+</dict>
+</plist>

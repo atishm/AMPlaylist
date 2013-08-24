@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12E55" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Disc" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Track">
+        <attribute name="artist" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bpm" optional="YES" attributeType="String" maxValueString="3" syncable="YES"/>
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="discName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="highlighted" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="trackNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <elements>
+        <element name="Disc" positionX="-36" positionY="189" width="171" height="60"/>
+        <element name="Track" positionX="214" positionY="189" width="128" height="195"/>
+    </elements>
+</model>
