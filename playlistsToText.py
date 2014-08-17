@@ -44,16 +44,23 @@ def printPlaylist(fileName):
       if (seconds < 60):
         seconds = "0%s" % seconds
       time = "%s:%s" % (minutes, seconds)
+      key = safeParse(info, 'KEY')
       
-      
-
-      print "%s \t %s \t %s" %  (title, time, artist)
+      #tempo
+      tempo = entry.find('TEMPO')
+      bpm = safeParse(tempo, 'BPM')
+    
+      print "%s \t %s \t %s \t %s \t %s \t %s" %  (title, time, artist, bpm, comment, key)
 
 
   except Exception, message:
     print "%s %s" % (Exception, message)
 
 def safeParse(element, attributeName):
-  return element.get(attributeName).encode('utf-8')
+  attribute = element.get(attributeName)
+  if attribute:
+    return attribute.encode('utf-8')
+  else:
+    return ""
 
 main()
