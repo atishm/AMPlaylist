@@ -21,6 +21,7 @@
 		230D871D15D0B74E00FCB213 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 230D871C15D0B74E00FCB213 /* MasterViewController.m */; };
 		230D872015D0B74E00FCB213 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 230D871F15D0B74E00FCB213 /* DetailViewController.m */; };
 		230D872D15D0BA2900FCB213 /* AMFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 230D872C15D0BA2900FCB213 /* AMFetcher.m */; };
+		23222AE919A11571009A7D05 /* playlistsToText.py in Resources */ = {isa = PBXBuildFile; fileRef = 23222AE719A11571009A7D05 /* playlistsToText.py */; };
 		23492B2B15DE0F1C008B654C /* TrackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23492B2A15DE0F1C008B654C /* TrackCell.m */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		230D871F15D0B74E00FCB213 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		230D872B15D0BA2900FCB213 /* AMFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFetcher.h; path = AMPlaylist2/AMFetcher.h; sourceTree = "<group>"; };
 		230D872C15D0BA2900FCB213 /* AMFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFetcher.m; path = AMPlaylist2/AMFetcher.m; sourceTree = "<group>"; };
+		23222AE719A11571009A7D05 /* playlistsToText.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = playlistsToText.py; sourceTree = "<group>"; };
 		23492B2915DE0F1C008B654C /* TrackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackCell.h; sourceTree = "<group>"; };
 		23492B2A15DE0F1C008B654C /* TrackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +71,7 @@
 		230D86EF15D0B74E00FCB213 = {
 			isa = PBXGroup;
 			children = (
+				23222AE519A11565009A7D05 /* Scripts */,
 				230D872A15D0BA1600FCB213 /* Data */,
 				230D870615D0B74E00FCB213 /* AMPlaylist2 */,
 				230D86FD15D0B74E00FCB213 /* Frameworks */,
@@ -136,6 +139,14 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
+		23222AE519A11565009A7D05 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				23222AE719A11571009A7D05 /* playlistsToText.py */,
+			);
+			name = Scripts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				230D870B15D0B74E00FCB213 /* InfoPlist.strings in Resources */,
+				23222AE919A11571009A7D05 /* playlistsToText.py in Resources */,
 				230D871415D0B74E00FCB213 /* MainStoryboard_iPhone.storyboard in Resources */,
 				230D871715D0B74E00FCB213 /* MainStoryboard_iPad.storyboard in Resources */,
 			);
