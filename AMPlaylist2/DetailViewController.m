@@ -228,7 +228,7 @@
   if ([highlighted boolValue] == YES) {
     cell.contentView.backgroundColor = [UIColor cyanColor];
   } else {
-    cell.contentView.backgroundColor = [UIColor whiteColor];
+    cell.contentView.backgroundColor = [UIColor clearColor];
   }
 
   cell.artist.text = [[object valueForKey:@"artist"] description];
@@ -257,7 +257,7 @@
   
   NSNumber *highlighted = [object valueForKey:@"highlighted"];
   if ([highlighted boolValue] == YES) {
-    cell.contentView.backgroundColor = [UIColor whiteColor];
+    cell.contentView.backgroundColor = [UIColor clearColor];
     [object setValue:[NSNumber numberWithBool:NO] forKey:@"highlighted"];
   } else {
     cell.contentView.backgroundColor = [UIColor cyanColor];

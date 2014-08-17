@@ -9,13 +9,9 @@
 #import "AMTrack.h"
 
 @implementation AMTrack
-@synthesize title = _title;
-@synthesize artist = _artist;
-@synthesize time = _time;
-@synthesize bpm = _bpm;
-@synthesize label = _label;
-@synthesize comment = _comment;
-@synthesize discName = _discName;
-@synthesize trackNumber = _trackNumber;
-@synthesize key = _key;
+
+- (NSString *)description
+{
+  return [NSString stringWithFormat:@"%@ %@ %@", _title, _artist, _comment];
+}
 @end

@@ -63,6 +63,15 @@
         [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
 }
 
+const CGFloat kLinePlaylistName = 0;
+
+const CGFloat kLineIndexTitle = 0;
+const CGFloat kLineIndexTime = 1;
+const CGFloat kLineIndexArtist = 2;
+const CGFloat kLineIndexBpm = 3;
+const CGFloat kLineIndexComment = 4;
+const CGFloat kLineIndexKey = 5;
+
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
   
@@ -81,13 +90,13 @@
   NSString *playlistName = nil;
   int trackNum = 1;
   
-  int numPlaylists =0;
+  int numPlaylists = 0;
   int numTracks = 0;
   for (NSString *line in items) {
     NSArray *fields = [line componentsSeparatedByString:@"\t"];
     if (fields.count == 1) {
       
-      playlistName = [fields objectAtIndex:0];
+      playlistName = [fields objectAtIndex:kLinePlaylistName];
       playlistName = [playlistName stringByTrimmingCharactersInSet:
                                  [NSCharacterSet whitespaceAndNewlineCharacterSet]];
       
@@ -99,18 +108,22 @@
     } else {
       if (playlistName) {
         NSMutableArray *tracks = [allData objectForKey:playlistName];
+        /*
         NSString *number = [fields objectAtIndex:0];
         if ([number isEqualToString:@"#"]) {
           continue;
         }
-        NSString *title = [fields objectAtIndex:1];
-        NSString *time = [fields objectAtIndex:2];
-        NSString *artist = [fields objectAtIndex:3];
-        NSString *bpm = [NSString stringWithFormat:@"%d", [[fields objectAtIndex:4] intValue]];
-        NSString *comment = [fields objectAtIndex:5];
+         */
+        trackNum++;
+         
+        NSString *title = [fields objectAtIndex:kLineIndexTitle];
+        NSString *time = [fields objectAtIndex:kLineIndexTime];
+        NSString *artist = [fields objectAtIndex:kLineIndexArtist];
+        NSString *bpm = [NSString stringWithFormat:@"%d", [[fields objectAtIndex:kLineIndexBpm] intValue]];
+        NSString *comment = [fields objectAtIndex:kLineIndexComment];
         NSString *key = @"x";
-        if (fields.count > 6) {
-          key = [fields objectAtIndex:6];
+        if (fields.count > kLineIndexKey) {
+          key = [fields objectAtIndex:kLineIndexKey];
         }
         
         //trim whitespace and remove 'm'...assume minor
@@ -129,6 +142,7 @@
         track.discName = playlistName;
         track.key = key;
         [tracks addObject:track];
+        NSLog(@"added track %@", track);
         numTracks++;
       } else {
         NSLog(@"skipping track because playlist name is nil");
