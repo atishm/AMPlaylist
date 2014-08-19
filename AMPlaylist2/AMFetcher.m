@@ -19,7 +19,7 @@
 @synthesize delegate = _delegate;
 -(void)fetchLatestPlaylists {
   // Create the request.
-  NSURLRequest *theRequest=[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.atish.net/playlists.txt"]
+  NSURLRequest *theRequest=[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.atish.net/playlist/playlists.txt"]
                                             cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
                                         timeoutInterval:60.0];
   // create the connection with the request
