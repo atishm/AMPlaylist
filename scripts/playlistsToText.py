@@ -1,6 +1,7 @@
 import getopt, string, re, sys, os
 from os.path import join, abspath
 import xml.etree.ElementTree as ET
+import id3image
 
 if len(sys.argv) != 2:
   print "Usage: playlistToText.py [path to collection file directory]"
@@ -62,7 +63,12 @@ def parsePlaylist(nodePlaylist):
       keyType = safeParse(primaryKey, 'TYPE')
       key = safeParse(primaryKey, 'KEY')
       if(key in allTracks):
-        returnString = "%s\n%s" % (returnString, allTracks[key])
+        dumpString = allTracks[key][0]
+        pathToFile = allTracks[key][1]
+        fileName = allTracks[key][2]
+        returnString = "%s\n%s" % (returnString, dumpString)
+      
+        id3image.getImagePathForMp3(pathToFile, fileName, directory)
       else:
         print "key was found in playlist, but not master collection: ", key
     except Exception, message:
@@ -95,6 +101,9 @@ def parseAllTracks(root):
       volume = safeParse(location, 'VOLUME')
       primaryKey = "%s%s%s" % (volume, dir, file)
       
+      filePathDir = dir.replace(":", '')
+      actualPathToFile = "%s%s" % (filePathDir, file)
+      
       #print primaryKey
       title = safeParse(entry, 'TITLE')
       artist = safeParse(entry, 'ARTIST')
@@ -115,7 +124,7 @@ def parseAllTracks(root):
       bpm = safeParse(tempo, 'BPM')
 
       printString = "%s \t %s \t %s \t %s \t %s \t %s" %  (title, time, artist, bpm, comment, key)
-      allTracks[primaryKey] = printString
+      allTracks[primaryKey] = [printString, actualPathToFile, file]
   except Exception, message:
     print "Error parsing track: %s %s" % (Exception, message)
 
