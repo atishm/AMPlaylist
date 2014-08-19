@@ -134,7 +134,8 @@
 }
 
 
--(void)didDownloadData:(NSMutableDictionary*)data {
+-(void)didDownloadData:(NSMutableDictionary*)data
+{
   if ([data allKeys].count > 0) {
     [self deleteAllObjects];
     [self deleteAllTracks];

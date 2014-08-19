@@ -8,6 +8,8 @@
 
 #import "AMFetcher.h"
 #import "AMTrack.h"
+#import "AMConstants.h"
+#import "ImageDownloader.h"
 
 @interface AMFetcher ()
 @property(nonatomic, retain) NSMutableData *receivedData;
@@ -17,11 +19,13 @@
 
 @synthesize receivedData = _receivedData;
 @synthesize delegate = _delegate;
+
 -(void)fetchLatestPlaylists {
   // Create the request.
-  NSURLRequest *theRequest=[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.atish.net/playlist/playlists.txt"]
-                                            cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
-                                        timeoutInterval:60.0];
+  NSString *urlString = [NSString stringWithFormat:@"%@/%@", kURLPrefix, kPlaylistFileName];
+  NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]
+                                              cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
+                                          timeoutInterval:60.0];
   // create the connection with the request
   // and start loading the data
   NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
@@ -93,6 +97,8 @@ const CGFloat kLineIndexFileName = 6;
   
   int numPlaylists = 0;
   int numTracks = 0;
+  
+  NSMutableArray *imagesToDownload = [NSMutableArray array];
   for (NSString *line in items) {
     NSArray *fields = [line componentsSeparatedByString:@"\t"];
     if (fields.count == 1) {
@@ -134,6 +140,9 @@ const CGFloat kLineIndexFileName = 6;
         key = [key stringByReplacingOccurrencesOfString:@"m" withString:@""];
         
         NSString *fileName = [fields objectAtIndex:kLineIndexFileName];
+        NSRange range = [fileName rangeOfString:@"^\\s*" options:NSRegularExpressionSearch];
+        NSString *fileNameTrimmed = [fileName stringByReplacingCharactersInRange:range withString:@""];
+        [imagesToDownload addObject:fileNameTrimmed];
         
         AMTrack *track = [[AMTrack alloc] init];
         track.title = title;
@@ -144,7 +153,7 @@ const CGFloat kLineIndexFileName = 6;
         track.trackNumber = trackNum++;
         track.discName = playlistName;
         track.key = key;
-        track.fileName = fileName;
+        track.fileName = fileNameTrimmed;
         [tracks addObject:track];
         NSLog(@"added track %@", track);
         numTracks++;
@@ -154,6 +163,9 @@ const CGFloat kLineIndexFileName = 6;
     }
   }
   NSLog(@"numPlaylists: %d, numTracks: %d", numPlaylists, numTracks);
+  
+  ImageDownloader *imageDownloader = [[ImageDownloader alloc] init];
+  [imageDownloader downloadImages:imagesToDownload];
   
   // release the connection, and the data object
   [_delegate didDownloadData:allData];
