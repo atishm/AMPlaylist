@@ -44,7 +44,7 @@ def parseCollection(fileName):
       nodeType = safeParse(playlist, 'TYPE')
       if (nodeType == "PLAYLIST"):
         parsedPlaylist = parsePlaylist(playlist)
-        print parsedPlaylist
+        #print parsedPlaylist
         writeFile.write("\n")
         writeFile.write(parsedPlaylist)
 
@@ -123,7 +123,7 @@ def parseAllTracks(root):
       tempo = entry.find('TEMPO')
       bpm = safeParse(tempo, 'BPM')
 
-      printString = "%s \t %s \t %s \t %s \t %s \t %s" %  (title, time, artist, bpm, comment, key)
+      printString = "%s \t %s \t %s \t %s \t %s \t %s \t %s" %  (title, time, artist, bpm, comment, key, file)
       allTracks[primaryKey] = [printString, actualPathToFile, file]
   except Exception, message:
     print "Error parsing track: %s %s" % (Exception, message)
