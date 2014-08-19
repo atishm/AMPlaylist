@@ -18,7 +18,12 @@
 
     NSData *imageData = [[NSData alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]]];
     NSLog(@"[%@] %@ image data size: %d", urlString, imageName, imageData.length);
-    [imageData writeToFile:imageNameJpg atomically:YES];
+    
+    NSArray *dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docsDir = [dirPaths objectAtIndex:0];
+    
+    NSString *databasePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent:imageNameJpg]];
+    [imageData writeToFile:databasePath atomically:YES];
   }
 }
 @end

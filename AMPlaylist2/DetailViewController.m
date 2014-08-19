@@ -237,7 +237,12 @@
   cell.trackNumber.text = [[object valueForKey:@"key"] description];
   cell.comment.text = [[object valueForKey:@"comment"] description];
   cell.discName = [[object valueForKey:@"discName"] description];
+  
+  NSString *fileName = [NSString stringWithFormat:@"%@.jpg", [[object valueForKey:@"fileName"] description]];
+  NSString *filepath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:fileName];
 
+  UIImage *image = [UIImage imageWithContentsOfFile:filepath];
+  cell.albumArt.image = image;
   
   UITapGestureRecognizer* doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
   doubleTap.numberOfTapsRequired = 2;

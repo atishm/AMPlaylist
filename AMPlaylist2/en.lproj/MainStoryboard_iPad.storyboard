@@ -72,7 +72,7 @@
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="125" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="h3p-U7-fm5" userLabel="bpm">
-                                            <rect key="frame" x="599" y="4" width="60" height="35"/>
+                                            <rect key="frame" x="643" y="33" width="60" height="35"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <gestureRecognizers/>
                                             <fontDescription key="fontDescription" type="system" pointSize="42"/>
@@ -86,10 +86,15 @@
                                             <color key="textColor" red="0.19499860522675497" green="0.39409265730049614" blue="0.43537703804347827" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="bbI-3Y-A2K">
+                                            <rect key="frame" x="579" y="0.0" width="68" height="68"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <gestureRecognizers/>
                                 <connections>
+                                    <outlet property="albumArt" destination="bbI-3Y-A2K" id="u1a-UR-zZR"/>
                                     <outlet property="artist" destination="FzO-x3-yaT" id="Guk-iO-ydB"/>
                                     <outlet property="bpm" destination="h3p-U7-fm5" id="A1y-a3-WEn"/>
                                     <outlet property="comment" destination="3du-0U-o5p" id="ZLE-to-JWW"/>
