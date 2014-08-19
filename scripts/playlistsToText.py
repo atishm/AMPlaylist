@@ -2,7 +2,6 @@ import getopt, string, re, sys, os
 from os.path import join, abspath
 import xml.etree.ElementTree as ET
 
-
 if len(sys.argv) != 2:
   print "Usage: playlistToText.py [path to collection file directory]"
   exit(1)
