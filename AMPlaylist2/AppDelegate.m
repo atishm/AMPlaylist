@@ -219,6 +219,7 @@
   [trackMO setValue:track.discName forKey:@"discName"];
   [trackMO setValue:[NSNumber numberWithInt:track.trackNumber] forKey:@"trackNumber"];
   [trackMO setValue:track.key forKey:@"key"];
+  [trackMO setValue:track.fileName forKey:@"fileName"];
   
   // Save the context.
   NSError *error = nil;

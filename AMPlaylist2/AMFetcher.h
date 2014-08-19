@@ -15,6 +15,6 @@
 @end
 
 @interface AMFetcher : NSObject
--(void)fetchLatestPlaylists;
+- (void)fetchLatestPlaylists;
 @property(nonatomic,assign)id<AMFetcherDelegate> delegate;
 @end

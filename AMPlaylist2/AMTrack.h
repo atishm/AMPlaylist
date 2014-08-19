@@ -19,4 +19,5 @@
 @property(nonatomic, copy)NSString *discName;
 @property(nonatomic, assign)int trackNumber;
 @property(nonatomic, copy)NSString *key;
+@property(nonatomic, copy)NSString *fileName;
 @end

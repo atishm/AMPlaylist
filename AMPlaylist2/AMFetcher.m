@@ -71,6 +71,7 @@ const CGFloat kLineIndexArtist = 2;
 const CGFloat kLineIndexBpm = 3;
 const CGFloat kLineIndexComment = 4;
 const CGFloat kLineIndexKey = 5;
+const CGFloat kLineIndexFileName = 6;
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
@@ -132,6 +133,8 @@ const CGFloat kLineIndexKey = 5;
         key = [key stringByReplacingOccurrencesOfString:@"maj" withString:@"M"];
         key = [key stringByReplacingOccurrencesOfString:@"m" withString:@""];
         
+        NSString *fileName = [fields objectAtIndex:kLineIndexFileName];
+        
         AMTrack *track = [[AMTrack alloc] init];
         track.title = title;
         track.time = time;
@@ -141,6 +144,7 @@ const CGFloat kLineIndexKey = 5;
         track.trackNumber = trackNum++;
         track.discName = playlistName;
         track.key = key;
+        track.fileName = fileName;
         [tracks addObject:track];
         NSLog(@"added track %@", track);
         numTracks++;
