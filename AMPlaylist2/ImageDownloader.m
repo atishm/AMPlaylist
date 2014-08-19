@@ -16,8 +16,9 @@
     NSString *imageNameJpg = [NSString stringWithFormat:@"%@.jpg", imageName];
     NSString *urlString = [NSString stringWithFormat:@"%@/%@/%@", kURLPrefix, kPlaylistImageDir, imageNameJpg];
 
+
     NSData *imageData = [[NSData alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]]];
-    NSLog(@"[%@] %@ image data size: %d", urlString, imageName, imageData.length);
+    NSLog(@"url: [%@] name: [%@] size: [%d]", urlString, imageName, imageData.length);
     
     NSArray *dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *docsDir = [dirPaths objectAtIndex:0];

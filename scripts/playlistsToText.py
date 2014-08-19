@@ -65,7 +65,7 @@ def parsePlaylist(nodePlaylist):
       if(key in allTracks):
         dumpString = allTracks[key][0]
         pathToFile = allTracks[key][1]
-        fileName = allTracks[key][2]
+        fileName = allTracks[key][2].replace(' ','')
         returnString = "%s\n%s" % (returnString, dumpString)
       
         id3image.getImagePathForMp3(pathToFile, fileName, directory)
@@ -98,6 +98,7 @@ def parseAllTracks(root):
       location = entry.find('LOCATION')
       dir = safeParse(location, 'DIR')
       file = safeParse(location, 'FILE')
+      fileSpacesRemoved = file.replace(' ','')
       volume = safeParse(location, 'VOLUME')
       primaryKey = "%s%s%s" % (volume, dir, file)
       
@@ -123,7 +124,7 @@ def parseAllTracks(root):
       tempo = entry.find('TEMPO')
       bpm = safeParse(tempo, 'BPM')
 
-      printString = "%s \t %s \t %s \t %s \t %s \t %s \t %s" %  (title, time, artist, bpm, comment, key, file)
+      printString = "%s \t %s \t %s \t %s \t %s \t %s \t %s" %  (title, time, artist, bpm, comment, key, fileSpacesRemoved)
       allTracks[primaryKey] = [printString, actualPathToFile, file]
   except Exception, message:
     print "Error parsing track: %s %s" % (Exception, message)
