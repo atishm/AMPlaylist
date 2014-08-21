@@ -76,6 +76,7 @@ const CGFloat kLineIndexBpm = 3;
 const CGFloat kLineIndexComment = 4;
 const CGFloat kLineIndexKey = 5;
 const CGFloat kLineIndexFileName = 6;
+const CGFloat kLineIndexRating = 7;
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
@@ -144,6 +145,8 @@ const CGFloat kLineIndexFileName = 6;
         NSString *fileNameTrimmed = [fileName stringByReplacingCharactersInRange:range withString:@""];
         [imagesToDownload addObject:fileNameTrimmed];
         
+        CGFloat rating = [[fields objectAtIndex:kLineIndexRating] floatValue];
+        
         AMTrack *track = [[AMTrack alloc] init];
         track.title = title;
         track.time = time;
@@ -154,6 +157,7 @@ const CGFloat kLineIndexFileName = 6;
         track.discName = playlistName;
         track.key = key;
         track.fileName = fileNameTrimmed;
+        track.rating = rating;
         [tracks addObject:track];
         NSLog(@"added track %@", track);
         numTracks++;

@@ -68,7 +68,7 @@ def parsePlaylist(nodePlaylist):
         fileName = allTracks[key][2].replace(' ','')
         returnString = "%s\n%s" % (returnString, dumpString)
       
-        id3image.getImagePathForMp3(pathToFile, fileName, directory)
+      #id3image.getImagePathForMp3(pathToFile, fileName, directory)
       else:
         print "key was found in playlist, but not master collection: ", key
     except Exception, message:
@@ -119,12 +119,28 @@ def parseAllTracks(root):
         seconds = "0%s" % seconds
         time = "%s:%s" % (minutes, seconds)
       key = safeParse(info, 'KEY')
+      ranking = safeParse(info, 'RANKING')
+      if ranking:
+        ranking = int(ranking)
+      if (ranking == 51):
+        ranking = 1
+      elif (ranking == 102):
+        ranking = 2
+      elif (ranking == 153):
+        ranking = 3
+      elif (ranking == 204):
+        ranking = 4
+      elif (ranking == 255):
+        ranking = 5
+      else:
+        ranking = 0
+      
       
       #tempo
       tempo = entry.find('TEMPO')
       bpm = safeParse(tempo, 'BPM')
 
-      printString = "%s \t %s \t %s \t %s \t %s \t %s \t %s" %  (title, time, artist, bpm, comment, key, fileSpacesRemoved)
+      printString = "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s" %  (title, time, artist, bpm, comment, key, fileSpacesRemoved, ranking)
       allTracks[primaryKey] = [printString, actualPathToFile, file]
   except Exception, message:
     print "Error parsing track: %s %s" % (Exception, message)

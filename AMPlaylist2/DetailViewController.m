@@ -237,10 +237,10 @@
   cell.trackNumber.text = [[object valueForKey:@"key"] description];
   cell.comment.text = [[object valueForKey:@"comment"] description];
   cell.discName = [[object valueForKey:@"discName"] description];
-  int numStars = 4;//[[object valueForKey:@"numStars"] description];
+  NSNumber *numStars = [object valueForKey:@"numStars"];
   
   NSString *starString = @"";
-  for (int i = 0; i < numStars; i++) {
+  for (int i = 0; i < [numStars integerValue]; i++) {
     starString = [starString stringByAppendingString:@"★"];
   }
   cell.starLabel.text = starString;

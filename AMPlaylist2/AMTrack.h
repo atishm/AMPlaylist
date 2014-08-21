@@ -20,4 +20,5 @@
 @property(nonatomic, assign)int trackNumber;
 @property(nonatomic, copy)NSString *key;
 @property(nonatomic, copy)NSString *fileName;
+@property(nonatomic, assign)CGFloat rating;
 @end
