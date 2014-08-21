@@ -13,7 +13,7 @@
 - (void)downloadImages:(NSArray *)imageNames
 {
   for (NSString *imageName in imageNames) {
-    NSString *imageNameJpg = [NSString stringWithFormat:@"%@.jpg", imageName];
+    NSString *imageNameJpg = [NSString stringWithFormat:@"%@.jpeg", imageName];
     NSString *urlString = [NSString stringWithFormat:@"%@/%@/%@", kURLPrefix, kPlaylistImageDir, imageNameJpg];
 
 

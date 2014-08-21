@@ -238,7 +238,7 @@
   cell.comment.text = [[object valueForKey:@"comment"] description];
   cell.discName = [[object valueForKey:@"discName"] description];
   
-  NSString *fileName = [NSString stringWithFormat:@"%@.jpg", [[object valueForKey:@"fileName"] description]];
+  NSString *fileName = [NSString stringWithFormat:@"%@.jpeg", [[object valueForKey:@"fileName"] description]];
   NSString *filepath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:fileName];
 
   UIImage *image = [UIImage imageWithContentsOfFile:filepath];
