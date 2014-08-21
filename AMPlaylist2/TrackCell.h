@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *track;
 @property (weak, nonatomic) NSString *discName;
 @property (weak, nonatomic) IBOutlet UIImageView *albumArt;
+@property (weak, nonatomic) IBOutlet UILabel *starLabel;
 @property (strong, nonatomic) IBOutlet UILongPressGestureRecognizer *gesture;
 
 @end

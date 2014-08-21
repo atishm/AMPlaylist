@@ -12,6 +12,7 @@
         <attribute name="highlighted" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numStars" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String">
             <userInfo/>
@@ -21,6 +22,6 @@
     </entity>
     <elements>
         <element name="Disc" positionX="-36" positionY="189" width="171" height="60"/>
-        <element name="Track" positionX="214" positionY="189" width="128" height="210"/>
+        <element name="Track" positionX="214" positionY="189" width="128" height="225"/>
     </elements>
 </model>

@@ -57,6 +57,13 @@
                                             <color key="textColor" red="0.12702866520179346" green="0.34527149890134512" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QzS-NG-Ufa" userLabel="starLabel">
+                                            <rect key="frame" x="398" y="7" width="217" height="53"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                            <color key="textColor" red="0.93692680027173914" green="0.51386231060690035" blue="7.1403940222773262e-05" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Aki Bergen, Carmen Sherry" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" id="FzO-x3-yaT" userLabel="artist">
                                             <rect key="frame" x="74" y="27" width="283" height="35"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -82,8 +89,7 @@
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="housey track with a little melody, fat bass, blah blah" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="10" id="3du-0U-o5p" userLabel="comment">
                                             <rect key="frame" x="403" y="-6" width="249" height="68"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.19499860522675497" green="0.39409265730049614" blue="0.43537703804347827" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="bbI-3Y-A2K">
@@ -98,6 +104,7 @@
                                     <outlet property="artist" destination="FzO-x3-yaT" id="Guk-iO-ydB"/>
                                     <outlet property="bpm" destination="h3p-U7-fm5" id="A1y-a3-WEn"/>
                                     <outlet property="comment" destination="3du-0U-o5p" id="ZLE-to-JWW"/>
+                                    <outlet property="starLabel" destination="QzS-NG-Ufa" id="vnN-vn-gEC"/>
                                     <outlet property="track" destination="OR5-D1-LHP" id="MX3-9j-3At"/>
                                     <outlet property="trackNumber" destination="Mjo-IQ-MeF" id="2a3-mf-TWY"/>
                                 </connections>

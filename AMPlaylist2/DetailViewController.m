@@ -237,6 +237,14 @@
   cell.trackNumber.text = [[object valueForKey:@"key"] description];
   cell.comment.text = [[object valueForKey:@"comment"] description];
   cell.discName = [[object valueForKey:@"discName"] description];
+  int numStars = 4;//[[object valueForKey:@"numStars"] description];
+  
+  NSString *starString = @"";
+  for (int i = 0; i < numStars; i++) {
+    starString = [starString stringByAppendingString:@"★"];
+  }
+  cell.starLabel.text = starString;
+  cell.starLabel.alpha = .5;
   
   NSString *fileName = [NSString stringWithFormat:@"%@.jpeg", [[object valueForKey:@"fileName"] description]];
   NSString *filepath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:fileName];
