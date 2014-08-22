@@ -8,12 +8,21 @@
 
 #import "ImageDownloader.h"
 #import "AMConstants.h"
+#import "AMUtils.h"
 
 @implementation ImageDownloader
 - (void)downloadImages:(NSArray *)imageNames
 {
   for (NSString *imageName in imageNames) {
     NSString *imageNameJpg = [NSString stringWithFormat:@"%@.jpeg", imageName];
+
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    if ([fileManager fileExistsAtPath:[AMUtils imagePathWithName:imageNameJpg] isDirectory:NO]) {
+      NSLog(@"skipping d/l of %@: it already exists", imageNameJpg);
+      continue;
+    }
+    
     NSString *urlString = [NSString stringWithFormat:@"%@/%@/%@", kURLPrefix, kPlaylistImageDir, imageNameJpg];
 
 

@@ -25,6 +25,7 @@
 		2322BA8519A30AAE00744CC8 /* playlistsToText.py in Resources */ = {isa = PBXBuildFile; fileRef = 2322BA8319A30AAE00744CC8 /* playlistsToText.py */; };
 		2322BA8819A3199F00744CC8 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2322BA8719A3199F00744CC8 /* ImageDownloader.m */; };
 		23492B2B15DE0F1C008B654C /* TrackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23492B2A15DE0F1C008B654C /* TrackCell.m */; };
+		237D2B1E19A78A34000B86A6 /* AMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 237D2B1D19A78A34000B86A6 /* AMUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,8 @@
 		2322BA8919A319E100744CC8 /* AMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMConstants.h; sourceTree = "<group>"; };
 		23492B2915DE0F1C008B654C /* TrackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackCell.h; sourceTree = "<group>"; };
 		23492B2A15DE0F1C008B654C /* TrackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackCell.m; sourceTree = "<group>"; };
+		237D2B1C19A78A34000B86A6 /* AMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMUtils.h; sourceTree = "<group>"; };
+		237D2B1D19A78A34000B86A6 /* AMUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				23492B2915DE0F1C008B654C /* TrackCell.h */,
 				23492B2A15DE0F1C008B654C /* TrackCell.m */,
 				2322BA8919A319E100744CC8 /* AMConstants.h */,
+				237D2B1C19A78A34000B86A6 /* AMUtils.h */,
+				237D2B1D19A78A34000B86A6 /* AMUtils.m */,
 			);
 			path = AMPlaylist2;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 				230D870D15D0B74E00FCB213 /* main.m in Sources */,
 				230D871115D0B74E00FCB213 /* AppDelegate.m in Sources */,
 				230D871A15D0B74E00FCB213 /* AMPlaylist2.xcdatamodeld in Sources */,
+				237D2B1E19A78A34000B86A6 /* AMUtils.m in Sources */,
 				2322BA8819A3199F00744CC8 /* ImageDownloader.m in Sources */,
 				230D871D15D0B74E00FCB213 /* MasterViewController.m in Sources */,
 				230D872015D0B74E00FCB213 /* DetailViewController.m in Sources */,

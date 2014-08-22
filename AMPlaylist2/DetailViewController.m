@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import "AppDelegate.h"
 #import "TrackCell.h"
+#import "AMUtils.h"
 #include <stdlib.h>
 
 @interface DetailViewController () {
@@ -251,10 +252,7 @@
   cell.starLabel.alpha = .5;
   
   NSString *fileName = [NSString stringWithFormat:@"%@.jpeg", [[object valueForKey:@"fileName"] description]];
-  NSString *filepath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:fileName];
-
-  UIImage *image = [UIImage imageWithContentsOfFile:filepath];
-  cell.albumArt.image = image;
+  cell.albumArt.image = [AMUtils imageWithName:fileName];
   
   UITapGestureRecognizer* doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
   doubleTap.numberOfTapsRequired = 2;
