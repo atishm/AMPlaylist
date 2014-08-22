@@ -11,7 +11,8 @@ else:
   print "Using directory %s" % directory
 
 # The traktor playlist folder name
-FOLDER_NAME = "2014 BM"
+FOLDER_NAMES = ["H2", "2014 - midyear"]
+
 def main():
   for subdir, dirs, files in os.walk(directory):
     for file in files:
@@ -39,14 +40,15 @@ def parseCollection(fileName):
     writePath = "%s/playlists.txt" % directory
     writeFile = open(writePath, 'w')
 
-    desiredFolderNode = findDesiredFolderNode(root)
-    for playlist in desiredFolderNode.iter('NODE'):
-      nodeType = safeParse(playlist, 'TYPE')
-      if (nodeType == "PLAYLIST"):
-        parsedPlaylist = parsePlaylist(playlist)
-        #print parsedPlaylist
-        writeFile.write("\n")
-        writeFile.write(parsedPlaylist)
+    for folderName in FOLDER_NAMES:
+      desiredFolderNode = findDesiredFolderNode(root, folderName)
+      for playlist in desiredFolderNode.iter('NODE'):
+        nodeType = safeParse(playlist, 'TYPE')
+        if (nodeType == "PLAYLIST"):
+          parsedPlaylist = parsePlaylist(playlist)
+          #print parsedPlaylist
+          writeFile.write("\n")
+          writeFile.write(parsedPlaylist)
 
     writeFile.close()
 
@@ -68,18 +70,18 @@ def parsePlaylist(nodePlaylist):
         fileName = allTracks[key][2].replace(' ','')
         returnString = "%s\n%s" % (returnString, dumpString)
       
-      #id3image.getImagePathForMp3(pathToFile, fileName, directory)
+        id3image.getImagePathForMp3(pathToFile, fileName, directory)
       else:
         print "key was found in playlist, but not master collection: ", key
     except Exception, message:
       print "Error parsing playlist key: %s" % (message)
   return returnString
 
-def findDesiredFolderNode(root):
+def findDesiredFolderNode(root, desiredFolderName):
   for node in root.iter('NODE'):
     nodeType = safeParse(node, 'TYPE')
     nodeName = safeParse(node, 'NAME')
-    if (nodeType == "FOLDER" and nodeName == "2014 BM"):
+    if (nodeType == "FOLDER" and nodeName == desiredFolderName):
       return node
   return None
 

@@ -63,9 +63,13 @@
       indexOfSectionToScrollTo++;
     }
     
-    CGRect sectionRect = [self.tableView rectForSection:indexOfSectionToScrollTo];
-    sectionRect.size.height = self.tableView.frame.size.height;
-    [self.tableView scrollRectToVisible:sectionRect animated:YES];
+    if (indexOfSectionToScrollTo < (self.tableView.numberOfSections - 1)) {
+      CGRect sectionRect = [self.tableView rectForSection:indexOfSectionToScrollTo];
+      sectionRect.size.height = self.tableView.frame.size.height;
+      [self.tableView scrollRectToVisible:sectionRect animated:YES];
+    } else {
+      NSLog(@"tried to jump to section %d, but couldn't", indexOfSectionToScrollTo);
+    }
     
   }
 }
@@ -311,7 +315,6 @@
     [[[self correctFetchedResultsController] sections] objectAtIndex:section];
   return sectionLabel.name;
 }
-
 
 - (void)viewDidUnload {
   [self setSearchBar:nil];
